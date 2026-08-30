@@ -19,7 +19,9 @@ export default function Home() {
 
         <section className="hero">
           <p>IA • SOLANA • WEB3</p>
+
           <h1>L’IA au service de l’écosystème crypto.</h1>
+
           <p>
             PROFITX construit un écosystème combinant intelligence
             artificielle, automatisation et blockchain Solana.
@@ -28,14 +30,15 @@ export default function Home() {
 
         <section id="about">
           <h2>Un projet construit pour évoluer</h2>
+
           <p>
-            PROFITX développe des outils et services autour de l’intelligence
-            artificielle et de la technologie blockchain.
+            PROFITX développe des outils et services autour de
+            l’intelligence artificielle et de la technologie blockchain.
           </p>
         </section>
 
         <footer>
-          © 2026 PROFITX – IA & Solana
+          © PROFITX 2026 – IA & Solana
         </footer>
       </main>
     </>
