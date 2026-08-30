@@ -179,39 +179,65 @@ export default function Home() {
           </div>
         </section>
 
-       {/* FOOTER */}
+{/* FOOTER */}
 <footer>
-  <div className="logo">PROFITX</div>
+  <div className="footer-main">
+    <div className="footer-brand">
+      <div className="logo">PROFITX</div>
+      <p>AI • SOLANA • WEB3</p>
+      <small>
+        Building intelligent infrastructure for the next generation of Web3.
+      </small>
+    </div>
 
-  <p>
-    IA • Solana • Web3
-  </p>
+    <div className="footer-links">
+      <div>
+        <span>EXPLORE</span>
+        <a href="#projet">Projet</a>
+        <a href="#pfx">PFX</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#ecosysteme">Écosystème</a>
+      </div>
 
-  <div className="social-links">
-    <a
-      href="https://x.com/profitx_ai"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      𝕏 X
-    </a>
+      <div>
+        <span>PROFITX</span>
+        <a
+          href="https://x.com/profitx_ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          𝕏 X
+        </a>
 
-    <a
-      href="https://www.tiktok.com/@pfx_profitx"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      TikTok
-    </a>
+        <a
+          href="https://www.tiktok.com/@pfx_profitx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok
+        </a>
 
-    <a
-      href="https://www.facebook.com/profile.php?id=61591572038365"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Facebook
-    </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61591572038365"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://pump.fun/coin/profitx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PUMP.FUN
+        </a>
+      </div>
+    </div>
   </div>
 
-  <small>© PROFITX 2026 — Tous droits réservés.</small>
+  <div className="footer-bottom">
+    <span>PROFITX © 2026</span>
+    <span>AI • SOLANA • WEB3</span>
+  </div>
 </footer>
