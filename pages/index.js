@@ -179,17 +179,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FOOTER */}
-        <footer>
-          <div className="logo">PROFITX</div>
+       {/* FOOTER */}
+<footer>
+  <div className="logo">PROFITX</div>
 
-          <p>
-            IA • Solana • Web3
-          </p>
+  <p>
+    IA • Solana • Web3
+  </p>
 
-          <small>© PROFITX 2026 — Tous droits réservés.</small>
-        </footer>
-      </main>
-    </>
-  );
-}
+  <div className="social-links">
+    <a
+      href="https://x.com/profitx_ai"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      𝕏 X
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@pfx_profitx"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      TikTok
+    </a>
+
+    <a
+      href="https://www.facebook.com/profile.php?id=61591572038365"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook
+    </a>
+  </div>
+
+  <small>© PROFITX 2026 — Tous droits réservés.</small>
+</footer>
