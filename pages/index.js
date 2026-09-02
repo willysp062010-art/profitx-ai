@@ -5,6 +5,7 @@ const SOCIAL_LINKS = {
   tiktok: "https://www.tiktok.com/@pfx_profitx",
   facebook: "https://www.facebook.com/profile.php?id=61591572038365",
   pump: "https://pump.fun/coin/6FwDVfnnETqUe2UrxZEeLA6u7Vo5Td2Nm79z7s38pump",
+  analyzer: "https://profitx-ai-analyzer.vercel.app/",
 };
 
 export default function Home() {
@@ -52,6 +53,7 @@ export default function Home() {
 
           <div className="nav-links">
             <a href="#projet">Projet</a>
+            <a href="#analyzer">Analyzer</a>
             <a href="#pfx">PFX</a>
             <a href="#roadmap">Roadmap</a>
             <a href="#ecosysteme">Écosystème</a>
@@ -102,6 +104,15 @@ export default function Home() {
                 className="button primary"
               >
                 Découvrir PROFITX
+              </a>
+
+              <a
+                href={SOCIAL_LINKS.analyzer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button analyzer"
+              >
+                ⚡ Lancer ProfitX AI Analyzer ↗
               </a>
 
               <a
@@ -216,6 +227,93 @@ export default function Home() {
 
 
         {/* =========================
+            PROFITX AI ANALYZER
+        ========================= */}
+
+        <section
+          id="analyzer"
+          className="section analyzer-section"
+        >
+
+          <div className="section-label">
+            02 — PROFITX AI ANALYZER
+          </div>
+
+          <h2>
+            Analysez un token Solana
+            <br />
+            avec ProfitX AI.
+          </h2>
+
+          <p className="section-intro">
+            ProfitX AI Analyzer observe les données disponibles
+            d’un token Solana pour présenter clairement sa liquidité,
+            sa distribution, son activité, son volume, sa maturité
+            et ses signaux de sécurité.
+          </p>
+
+          <div className="analyzer-grid">
+
+            <article className="analyzer-card">
+              <span>01</span>
+              <h3>Données observables</h3>
+              <p>
+                Liquidité, volume, transactions, holders,
+                prix, market cap et état du marché.
+              </p>
+            </article>
+
+            <article className="analyzer-card">
+              <span>02</span>
+              <h3>Scores ProfitX</h3>
+              <p>
+                Lecture structurée de la liquidité,
+                de la distribution, de l’activité,
+                du volume, de la maturité et de la sécurité.
+              </p>
+            </article>
+
+            <article className="analyzer-card">
+              <span>03</span>
+              <h3>Analyse Solana</h3>
+              <p>
+                Un moteur en développement conçu pour
+                séparer les données observées des signaux
+                d’interprétation.
+              </p>
+            </article>
+
+          </div>
+
+          <div className="analyzer-cta">
+
+            <div>
+              <span className="mini-label">
+                PROFITX AI ANALYZER
+              </span>
+
+              <strong>
+                Tester le moteur d’analyse Solana
+              </strong>
+
+              <p>
+                Entrez une adresse mint et lancez l’analyse.
+              </p>
+            </div>
+
+            <a
+              href={SOCIAL_LINKS.analyzer}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button analyzer"
+            >
+              ⚡ Lancer l’Analyzer ↗
+            </a>
+
+          </div>
+
+        </section>
+        {/* =========================
             PFX
         ========================= */}
 
@@ -225,7 +323,7 @@ export default function Home() {
         >
 
           <div className="section-label">
-            02 — TOKEN PFX
+            03 — TOKEN PFX
           </div>
 
           <h2>
@@ -326,7 +424,7 @@ export default function Home() {
         >
 
           <div className="section-label">
-            03 — ROADMAP 2026
+            04 — ROADMAP 2026
           </div>
 
           <h2>
@@ -425,7 +523,7 @@ export default function Home() {
         >
 
           <div className="section-label">
-            04 — ÉCOSYSTÈME
+            05 — ÉCOSYSTÈME
           </div>
 
           <h2>
@@ -630,6 +728,10 @@ export default function Home() {
               Projet
             </a>
 
+            <a href="#analyzer">
+              Analyzer
+            </a>
+
             <a href="#pfx">
               PFX
             </a>
@@ -640,6 +742,14 @@ export default function Home() {
 
             <a href="#ecosysteme">
               Écosystème
+            </a>
+
+            <a
+              href={SOCIAL_LINKS.analyzer}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ProfitX AI Analyzer
             </a>
 
             <a
@@ -775,7 +885,7 @@ export default function Home() {
 
         .nav-links {
           display: flex;
-          gap: 34px;
+          gap: 28px;
 
           font-size: 13px;
           color: #a6a6a6;
@@ -833,7 +943,7 @@ export default function Home() {
           position: relative;
           z-index: 2;
 
-          max-width: 900px;
+          max-width: 1000px;
         }
 
 
@@ -960,6 +1070,31 @@ export default function Home() {
         }
 
 
+        .button.analyzer {
+          border: 1px solid #32ff7e;
+
+          background:
+            rgba(50, 255, 126, 0.08);
+
+          color: #32ff7e;
+
+          box-shadow:
+            0 0 24px rgba(50, 255, 126, 0.08);
+        }
+
+
+        .button.analyzer:hover {
+          background: #32ff7e;
+
+          color: #000;
+
+          box-shadow:
+            0 0 35px rgba(50, 255, 126, 0.25);
+
+          transform: translateY(-2px);
+        }
+
+
         /* SECTIONS */
 
         .section {
@@ -993,6 +1128,126 @@ export default function Home() {
           font-size: 15px;
 
           line-height: 1.7;
+        }
+                /* ANALYZER */
+
+        .analyzer-section {
+          position: relative;
+
+          background:
+            radial-gradient(
+              circle at 75% 35%,
+              rgba(50, 255, 126, 0.07),
+              transparent 32%
+            );
+        }
+
+
+        .analyzer-grid {
+          display: grid;
+
+          grid-template-columns:
+            repeat(3, 1fr);
+
+          gap: 10px;
+
+          margin-top: 60px;
+        }
+
+
+        .analyzer-card {
+          min-height: 230px;
+
+          padding: 30px;
+
+          background:
+            linear-gradient(
+              145deg,
+              rgba(50, 255, 126, 0.035),
+              #090909 55%
+            );
+
+          border:
+            1px solid #1a1a1a;
+
+          transition: 0.25s;
+        }
+
+
+        .analyzer-card:hover {
+          border-color:
+            rgba(50, 255, 126, 0.65);
+
+          transform: translateY(-4px);
+
+          box-shadow:
+            0 0 35px rgba(50, 255, 126, 0.06);
+        }
+
+
+        .analyzer-card > span {
+          color: #32ff7e;
+
+          font-size: 10px;
+
+          font-weight: 800;
+
+          letter-spacing: 3px;
+        }
+
+
+        .analyzer-card h3 {
+          margin: 28px 0 12px;
+
+          font-size: 19px;
+        }
+
+
+        .analyzer-card p {
+          margin: 0;
+
+          color: #777;
+
+          font-size: 13px;
+
+          line-height: 1.7;
+        }
+
+
+        .analyzer-cta {
+          display: flex;
+
+          align-items: center;
+
+          justify-content: space-between;
+
+          gap: 25px;
+
+          margin-top: 16px;
+
+          padding: 28px 30px;
+
+          border:
+            1px solid rgba(50, 255, 126, 0.25);
+
+          background:
+            rgba(50, 255, 126, 0.035);
+        }
+
+
+        .analyzer-cta strong {
+          display: block;
+
+          font-size: 18px;
+        }
+
+
+        .analyzer-cta p {
+          margin: 7px 0 0;
+
+          color: #777;
+
+          font-size: 13px;
         }
 
 
@@ -1446,9 +1701,7 @@ export default function Home() {
 
           color: #777;
         }
-
-
-        /* FOOTER */
+                /* FOOTER */
 
         footer {
           padding:
@@ -1552,11 +1805,20 @@ export default function Home() {
 
 
           .cards,
+          .analyzer-grid,
           .social-links,
           .ecosystem-grid,
           .roadmap,
           .token-box {
             grid-template-columns: 1fr;
+          }
+
+
+          .analyzer-cta,
+          .token-cta {
+            flex-direction: column;
+
+            align-items: flex-start;
           }
 
 
@@ -1574,13 +1836,6 @@ export default function Home() {
 
 
           .token-note {
-            align-items: flex-start;
-          }
-
-
-          .token-cta {
-            flex-direction: column;
-
             align-items: flex-start;
           }
 
