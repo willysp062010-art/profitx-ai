@@ -1,10 +1,12 @@
+
 import Head from "next/head";
 
 const SOCIAL_LINKS = {
   x: "https://x.com/IVAR4019",
   tiktok: "https://www.tiktok.com/@pfx_profitx",
   facebook: "https://www.facebook.com/profile.php?id=61591572038365",
-  pump: "https://pump.fun/coin/6FwDVfnnETqUe2UrxZEeLA6u7Vo5Td2Nm79z7s38pump",
+  raydium:
+    "https://raydium.io/swap/?inputMint=sol&outputMint=6FwDVfnnETqUe2UrxZEeLA6u7Vo5Td2Nm79z7s38pump",
   analyzer: "https://profitx-ai-analyzer.vercel.app/",
 };
 
@@ -109,12 +111,12 @@ export default function Home() {
               </a>
 
               <a
-                href={SOCIAL_LINKS.pump}
+                href={SOCIAL_LINKS.raydium}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button secondary"
               >
-                Voir PFX sur Pump.fun ↗
+                Acheter PFX sur Raydium ↗
               </a>
             </div>
           </div>
@@ -374,14 +376,22 @@ export default function Home() {
             </a>
 
             <a
-              href={SOCIAL_LINKS.pump}
+              href={SOCIAL_LINKS.raydium}
               target="_blank"
               rel="noopener noreferrer"
               className="button primary"
             >
-              Voir PFX sur Pump.fun ↗
+              Acheter PFX sur Raydium ↗
             </a>
           </div>
+
+          <p className="liquidity-warning">
+            Attention : la liquidité du pool PFX/SOL sur Raydium
+            est actuellement très faible. Un achat ou une vente
+            peut entraîner un glissement de prix important.
+            Vérifiez toujours le mint officiel et les conditions
+            du swap avant toute transaction.
+          </p>
         </section>
 
         <section
@@ -541,7 +551,7 @@ export default function Home() {
             </a>
 
             <a
-              href={SOCIAL_LINKS.pump}
+              href={SOCIAL_LINKS.raydium}
               target="_blank"
               rel="noopener noreferrer"
               className="pump-card"
@@ -551,8 +561,8 @@ export default function Home() {
               </span>
 
               <div>
-                <strong>PUMP.FUN</strong>
-                <small>Voir le token PFX ↗</small>
+                <strong>RAYDIUM</strong>
+                <small>Échanger le token PFX ↗</small>
               </div>
             </a>
           </div>
@@ -621,11 +631,11 @@ export default function Home() {
             </a>
 
             <a
-              href={SOCIAL_LINKS.pump}
+              href={SOCIAL_LINKS.raydium}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Pump.fun
+              Raydium
             </a>
           </div>
 
@@ -1053,6 +1063,17 @@ export default function Home() {
           font-size: 9px;
           font-weight: 800;
           letter-spacing: 3px;
+        }
+
+        .liquidity-warning {
+          margin-top: 20px;
+          padding: 16px 20px;
+          border: 1px solid rgba(255, 193, 7, 0.35);
+          border-radius: 5px;
+          background: rgba(255, 193, 7, 0.045);
+          color: #d5c49d;
+          font-size: 12px;
+          line-height: 1.7;
         }
 
         .roadmap {
