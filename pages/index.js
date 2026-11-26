@@ -44,13 +44,13 @@ export default function Home() {
           content="Analyse de tokens Solana, données observables, activité, liquidité et indicateurs de risque."
         />
 
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website" /><link rel="icon" type="image/webp" href="/pfx-logo-spectrum.webp" /><link rel="preload" href="/fonts/dm-sans-variable.woff" as="font" type="font/woff" crossOrigin="anonymous" /><link rel="preload" href="/fonts/outfit-variable.woff" as="font" type="font/woff" crossOrigin="anonymous" />
       </Head>
 
-      <main>
+      <main id="pfx-landing"><a className="skip-link" href="#projet">Aller au contenu</a><div className="spectrum-background" aria-hidden="true">{[1,2,3,4,5].map(i=><img key={i} className={`bubble bubble-${i}`} src="/pfx-logo-spectrum.webp" alt="" width="100" height="100" />)}</div>
         <nav className="navbar">
           <a href="#" className="nav-logo">
-            PROFITX
+            <img src="/pfx-logo-spectrum.webp" alt="" width="44" height="44" /><span>PROFITX <b>AI</b><small>SOLANA · WEB3</small></span>
           </a>
 
           <div className="nav-links">
@@ -78,11 +78,7 @@ export default function Home() {
             </div>
 
             <h1>
-              Analysez un token Solana
-              <br />
-              avant de prendre
-              <br />
-              votre décision.
+              Analysez un token Solana <span className="headline-accent">avant de prendre votre décision.</span>
             </h1>
 
             <p className="hero-text">
@@ -100,7 +96,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="button analyzer"
               >
-                ⚡ Lancer PFX AI Analyzer ↗
+                Lancer l’Analyzer gratuit ↗
               </a>
 
               <a
@@ -121,10 +117,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="hero-glow"
-            aria-hidden="true"
-          />
+          <div className="hero-mark"><div className="mark-caption"><span>PROFITX / OBSERVATORY</span><span>SOLANA</span></div><div className="mark-orbit"><img src="/pfx-logo-spectrum.webp" alt="Médaillon officiel PROFITX PFX" width="360" height="360" /></div><div className="mark-caption"><span>ANALYZE · DECIDE</span><span className="spectrum-bars">▰ ▰ ▰</span></div></div>
         </section>
 
         <section
@@ -265,7 +258,7 @@ export default function Home() {
               </strong>
 
               <p>
-                Entrez une adresse mint et lancez l’analyse.
+                Recherchez un token par nom, symbole ou adresse mint.
               </p>
             </div>
 
@@ -319,9 +312,7 @@ export default function Home() {
           </div>
 
           <div className="token-note">
-            <span className="token-symbol">
-              PFX
-            </span>
+            <img className="token-symbol" src="/pfx-logo-spectrum.webp" alt="PFX officiel" width="80" height="80" />
 
             <div>
               <h3>Aujourd’hui.</h3>
@@ -554,9 +545,9 @@ export default function Home() {
               href={SOCIAL_LINKS.raydium}
               target="_blank"
               rel="noopener noreferrer"
-              className="pump-card"
+              className="raydium-card"
             >
-              <span className="social-icon pump-icon">
+              <span className="social-icon raydium-icon">
                 PFX
               </span>
 
@@ -1194,7 +1185,7 @@ export default function Home() {
           font-weight: 900;
         }
 
-        .pump-icon {
+        .raydium-icon {
           font-size: 11px;
           color: #32ff7e;
           border-color: #32ff7e;
@@ -1315,7 +1306,65 @@ export default function Home() {
             grid-column: auto;
           }
         }
+
+        :global(body) { background:#03050c; color:#e7edf5; font-family:"PFX DM Sans","Segoe UI",sans-serif; }
+        :global(a:focus-visible) { outline:3px solid #00e5ff; outline-offset:4px; }
+        main { position:relative; background:radial-gradient(ellipse at 94% 12%,#a431ff1a,transparent 42%),radial-gradient(ellipse at 8% 42%,#00bfff0c,transparent 45%),#03050c; }
+        .navbar { height:auto; min-height:78px; padding:14px max(24px,5%); background:#080a10f5; border-bottom:1px solid #273044; gap:20px; }
+        .navbar::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#00ff88,#00e5ff,#258bff,#b45cff,#ef39ff); }
+        .nav-logo { display:flex; align-items:center; gap:12px; font-family:"PFX Outfit",sans-serif; font-size:20px; font-weight:600; letter-spacing:.5px; }
+        .nav-logo img { border-radius:50%; object-fit:cover; }
+        .nav-logo b { color:#00ff88; font-weight:500; }
+        .nav-logo small { display:block; font:10px "PFX DM Sans",sans-serif; color:#aeb8cd; letter-spacing:1.5px; }
+        .nav-links { display:flex; gap:20px; color:#aeb8cd; }
+        .nav-button { border-radius:10px; border-color:#514366; color:#d7c9f7; background:#171925; }
+        .hero { min-height:0; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr); gap:48px; width:min(1380px,calc(100% - 64px)); margin:auto; padding:70px 0; border-color:#273044; overflow:visible; }
+        .hero-content { min-width:0; }
+        h1,h2,h3,.vision-title,.footer-logo { font-family:"PFX Outfit","Segoe UI",sans-serif; }
+        .hero h1 { font-size:clamp(42px,4.8vw,72px); font-weight:600; letter-spacing:-.045em; line-height:1.13; }
+        .headline-accent { background:linear-gradient(100deg,#00e5ff,#b36aff 55%,#f35fff); background-clip:text; -webkit-background-clip:text; color:transparent; }
+        .eyebrow,.section-label,.mini-label,.card-number,.analyzer-card>span,.roadmap-item>span { color:#c385ff; letter-spacing:.14em; font-weight:650; }
+        .hero-text,.section-intro,.card p,.analyzer-card p,.roadmap-item p,.vision-box p,.token-note p,.analyzer-cta p,.social-section>p,.social-links small,.footer-links,footer small,.mint-box small { color:#aeb8cd; font-size:15px; line-height:1.75; }
+        .hero-text { font-size:18px; margin-top:24px; }
+        .button { border-radius:10px; font-weight:650; min-height:48px; }
+        .button.analyzer { background:#00ff88; color:#071b12; border-color:#00ff88; }
+        .button.analyzer:hover { background:#55ffb0; }
+        .button.primary,.button.secondary { background:#171925; color:#d7c9f7; border:1px solid #514366; box-shadow:none; }
+        .button.primary:hover,.button.secondary:hover { border-color:#00e5ff; color:#e7edf5; }
+        .section,.social-section { position:relative; width:min(1380px,calc(100% - 64px)); max-width:none; padding:72px 0; border-bottom:1px solid #273044; }
+        h2,.section h2 { font-size:clamp(32px,4vw,54px); line-height:1.15; font-weight:550; letter-spacing:-.025em; }
+        h3 { font-weight:600; }
+        .cards,.analyzer-grid,.roadmap,.social-links,.ecosystem-grid,.token-box { margin-top:32px; gap:16px; }
+        .card,.analyzer-card,.roadmap-item,.social-links a,.token-box,.token-note,.mint-box,.vision-box,.analyzer-cta,.ecosystem-grid div { background:#0b101dee; border:1px solid #273044; border-radius:14px; min-width:0; }
+        .card,.analyzer-card { min-height:190px; }
+        .card:hover,.analyzer-card:hover,.social-links a:hover { border-color:#b45cff; }
+        .analyzer-section,.token-section { background:transparent; }
+        .token-box { overflow:hidden; }
+        .token-box span { color:#aeb8cd; }
+        .token-box>div { border-color:#273044; }
+        .token-note .token-symbol { object-fit:cover; border:0; }
+        .mint-box code { background:#03050c; border-color:#273044; border-radius:8px; }
+        .ecosystem-grid { border:0; }
+        .ecosystem-grid div { min-height:90px; color:#aeb8cd; }
+        .roadmap-item { border-left:2px solid #b45cff; }
+        .vision-box { padding:32px; background:linear-gradient(115deg,#1b0934,#071c2b 70%); }
+        .hero-mark { position:relative; min-width:0; align-self:center; }
+        .mark-caption { display:flex; justify-content:space-between; gap:12px; color:#c385ff; border-bottom:1px solid #273044; padding:12px 0; font-size:10px; letter-spacing:1px; }
+        .mark-orbit { aspect-ratio:1; display:grid; place-items:center; border:1px solid #3b3870; border-radius:50%; margin:22px 0; background:radial-gradient(circle,#5718a633,transparent 72%); }
+        .mark-orbit img { width:78%; height:auto; border-radius:50%; box-shadow:0 0 55px #a431ff44,0 0 22px #00e5ff44; }
+        .spectrum-bars { color:#00e5ff; }
+        .spectrum-background { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+        .bubble { position:absolute; border-radius:50%; opacity:.09; animation:float 24s ease-in-out infinite alternate; object-fit:cover; }
+        .bubble-1 { top:12%; left:1%; } .bubble-2 { top:30%; right:1%; animation-delay:-8s; } .bubble-3 { top:49%; left:2%; animation-delay:-12s; } .bubble-4 { top:69%; right:2%; animation-delay:-4s; } .bubble-5 { top:88%; left:3%; animation-delay:-16s; }
+        @keyframes float { from { transform:translateY(-18px) rotate(-5deg); } to { transform:translateY(26px) rotate(5deg); } }
+        .skip-link { position:absolute; left:12px; top:8px; z-index:100; padding:10px; background:#e7edf5; color:#03050c; transform:translateY(-200%); }
+        .skip-link:focus { transform:none; }
+        .section { scroll-margin-top:115px; }
+        footer { position:relative; border-color:#273044; }
+        @media(max-width:800px) { .navbar { position:relative; flex-wrap:wrap; padding:12px 16px; gap:12px; } .nav-links { order:3; width:100%; display:flex; flex-wrap:wrap; gap:6px 15px; } .nav-links a { padding:8px 0; } .hero,.section,.social-section { width:calc(100% - 32px); padding:42px 0; } .hero { grid-template-columns:1fr; gap:28px; } .hero h1 { font-size:clamp(34px,8vw,48px); } .hero-mark { max-width:260px; width:100%; justify-self:center; } .hero-buttons,.token-actions { gap:10px; } .hero-buttons .button,.token-actions .button { width:100%; } .bubble { animation:none; opacity:.05; } .cards,.analyzer-grid,.roadmap,.social-links,.ecosystem-grid,.token-box { grid-template-columns:1fr; } .card,.analyzer-card { min-height:0; padding:22px; } .section { scroll-margin-top:16px; } }
+        @media(prefers-reduced-motion:reduce) { .bubble { animation:none; } :global(html) { scroll-behavior:auto; } }
       `}</style>
+      <style jsx global>{`@font-face{font-family:"PFX DM Sans";src:url("/fonts/dm-sans-variable.woff") format("woff");font-weight:100 1000;font-display:swap;}@font-face{font-family:"PFX Outfit";src:url("/fonts/outfit-variable.woff") format("woff");font-weight:100 900;font-display:swap;}`}</style>
     </>
   );
 }
